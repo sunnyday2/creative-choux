@@ -1,0 +1,23 @@
+
+# Existing Playwright entries
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+
+# Environment variables & secrets
+.env
+.env.local
+
+# OS / Editor generated files
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# Test artifacts & trace files (if saved outside standard folders)
+*.trace.zip

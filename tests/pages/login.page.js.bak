@@ -1,0 +1,83 @@
+import { Page, Locator } from '@playwright/test';
+
+export class PetStoreLoginPage {
+  constructor(page) {
+    this.page = page;
+    this.url = `/login`;
+    this.emailInput = page.locator("input[type='email']");
+    this.passwordInput = page.locator("input[type='password']");
+    this.submitBtn = page.locator("button[type='submit'], button:has-text('Iniciar')");
+    this.visibilityToggle = page.locator("button[type='button']");
+  }
+
+  async navigate() {
+    await this.page.goto(this.url);
+    await this.page.waitForLoadState('domcontentloaded');
+  }
+
+  async login(email, password) {
+    await this.emailInput.fill(email);
+    await this.passwordInput.fill(password);
+    await this.submitBtn.first().click();
+  }
+
+  isLoaded() {
+    return this.page.url().includes('/login');
+  }
+}
+
+export class PetStoreRegistroPage {
+  constructor(page) {
+    this.page = page;
+    this.url = `${BASE_URL}/registro`;
+    this.nameInput = page.locator("input[type='text']");
+    this.emailInput = page.locator("input[type='email']");
+    this.passwordInput = page.locator("input[type='password']").first();
+    this.confirmPasswordInput = page.locator("input[type='password']").nth(1);
+    this.termsCheckbox = page.locator("input[type='checkbox']");
+    this.submitBtn = page.locator("button[type='submit'], button:has-text('Crear Cuenta')");
+  }
+
+  async navigate() {
+    await this.page.goto(this.url);
+    await this.page.waitForLoadState('domcontentloaded');
+  }
+
+  async register(name, email, password, confirm) {
+    await this.nameInput.fill(name);
+    await this.emailInput.fill(email);
+    await this.passwordInput.fill(password);
+    await this.confirmPasswordInput.fill(confirm);
+    await this.termsCheckbox.check();
+    await this.submitBtn.first().click();
+  }
+
+  isLoaded() {
+    return this.page.url().includes('/registro');
+  }
+}
+
+export class PetStoreContactoPage {
+  constructor(page) {
+    this.page = page;
+    this.url = `${BASE_URL}/contacto`;
+    this.nameInput = page.locator("input[type='text']");
+    this.emailInput = page.locator("input[type='email']");
+    this.submitBtn = page.locator("button[type='submit']");
+  }
+
+  async navigate() {
+    await this.page.goto(this.url);
+    await this.page.waitForLoadState('domcontentloaded');
+  }
+
+  async submitMessage(name, email) {
+    await this.nameInput.fill(name);
+    await this.emailInput.fill(email);
+    await this.submitBtn.click();
+  }
+
+  isLoaded() {
+    return this.page.url().includes('/contacto');
+  }
+}

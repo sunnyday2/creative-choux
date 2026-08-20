@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "@playwright/test": "^1.41.2",
+    "@types/node": "^26.1.2",
+    "allure-commandline": "^2.43.0",
+    "allure-js-commons": "^3.10.2",
+    "allure-playwright": "^3.10.2"
+  },
+  "scripts": {
+    "test:e2e": "npx playwright test"
+  },
+  "allowScripts": {
+    "fsevents@2.3.2": true
+  }
+}

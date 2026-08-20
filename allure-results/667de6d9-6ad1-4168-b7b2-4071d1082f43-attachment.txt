@@ -1,0 +1,1 @@
+Logout y volver a la página de login

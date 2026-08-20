@@ -1,0 +1,46 @@
+Para n8n:
+  nvm install 20
+  nvm use 20
+  nvm alias default 20
+  npm install n8n -g
+  n8n
+nvm use 20
+nvm ls
+nvm use 24
+En la carpeta del proyecto especifico, crea un archivo llamado:
+echo "24" > .nvmrc
+Cada vez que entres a esa carpeta desde la terminal, solo ejecutas:
+  nvm use
+
+
+source .venv/bin/activate
+npm init playwright@latest
+npm install -D @playwright/test@1.41.2
+npm audit fix --force
+  npx playwright show-report  
+   npm install --save-dev  allure-playwright
+   npm install -D allure-js-commons 
+brew install bruno
+https://thesimpsonsapi.com/api/characters/1
+https://www.usebruno.com/
+  brew install bruno
+https://pokeapi.co/
+ 
+Usted (31 de jul de 2026, 20:32)
+jsonplaceholder.typicode.com
+
+     npm approve-scripts --allow-scripts-pending 
+     npm approve-scripts fsevents
+      npx playwright codegen 
+      https://creative-choux-407b2c.netlify.app/
+      Leonardo Jose
+https://lato-cafes.netlify.app/
+https://mercadolocal-front-flame.vercel.app/
+Daniel Rojas
+https://patagonia-coffee-roasters.vercel.app/
+npx playwright test
+
+     npm install --save-dev  allure-commandline  
+      npx allure generate allure-results --clean -o allure-report 
+      npx allure serve allure-results 
+sudo chown -R $(whoami) ~/.npm ~/.config
