@@ -26,8 +26,9 @@ jobs:
         run: npx playwright install --with-deps chromium
 
       - name: Run E2E tests
-        run: npm playwright test:e2e
-      
+        # run: npx playwright test -- chromium
+        run: npm run test:e2e -- --project=chromium
+
       - name: Generate Report
         if: always()
         uses: actions/upload-artifact@v7

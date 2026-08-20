@@ -14,7 +14,7 @@ test.describe('Go to Login Page', () => {
     const registroPage = new PetStoreRegistroPage(page);
     await registroPage.navigate();
     await expect(page).toHaveURL('/registro');
-    await registroPage.register("Anna", "gannaua+doguito4@gmail.com", "miContraseña123", "miContraseña123");
+    await registroPage.register("Anna", "gannaua+doguito5@gmail.com", "miContraseña123", "miContraseña123");
 
     await expect(page).toHaveURL('/');
   });
